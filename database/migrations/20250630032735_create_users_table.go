@@ -22,9 +22,9 @@ func (r *M20250630032735CreateUsersTable) Up() error {
 			table.String("email")
 			table.Unique("email")
 			table.Timestamp("email_verified_at")
-			table.String("phone")
+			table.String("phone").Nullable()
 			table.String("password")
-			table.String("remember_token")
+			table.String("remember_token").Nullable()
 			table.TimestampsTz()
 		})
 	}
